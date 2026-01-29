@@ -42,14 +42,10 @@ const Home = () => {
               AI Engineer | Full-Stack Developer | Data Analyst
             </p>
             <p className="hero-description">
-              Currently seeking part-time opportunities and internships in AI, data analytics,
-              and software development. I love turning ideas into impactful solutions and
-              connecting with people who share a passion for tech and innovation.
-            </p>
-            <p className="hero-cta-text">
-              Let's connect! I'd love to chat about potential collaborations, opportunities,
-              or just share ideas over a coffee (or matcha).
-            </p>
+            I study IT & Commerce at Monash and enjoy building thoughtful, data-driven tech with AI and analytics. I’ve worked across banking, consulting, and cloud environments, and I’m particularly interested in creating inclusive tools for neurodivergent users.            <br /><br />
+            Always happy to chat about ideas, projects, or anything interesting you’re working on.
+          </p>
+
             <div className="hero-buttons">
               <Link to="/about" className="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
