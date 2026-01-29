@@ -75,19 +75,11 @@ const Competitions = () => {
     },
     {
       id: 10,
-      title: 'University of Sydney BAP Case Competition',
+      title: 'McKinsey x BAP Case Competition',
       result: 'Melbourne Finals',
       description: 'Advanced to the Melbourne finals round, competing against top teams in strategic business analysis and presentation.',
       date: '2025',
       organizer: 'University of Sydney'
-    },
-    {
-      id: 11,
-      title: 'McKinsey Case Competition',
-      result: 'Melbourne Finals',
-      description: 'Reached the Melbourne finals of the prestigious McKinsey case competition, demonstrating consulting-level problem-solving and strategic thinking.',
-      date: '2025',
-      organizer: 'McKinsey & Company'
     },
   ]
 
