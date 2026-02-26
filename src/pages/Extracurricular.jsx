@@ -98,7 +98,7 @@ const Extracurricular = () => {
       id: 1,
       title: 'Consulting Director',
       organization: 'Impetus Consulting Group',
-      duration: 'Nov 2025 – Present',
+      duration: 'Nov 2025 – Feb 2026',
       description: 'Conducting interviews and assessment centers for prospective consultants. Overseeing documentation and improving internal processes. Enhancing the organization\'s growth and training standards.'
     },
     {
