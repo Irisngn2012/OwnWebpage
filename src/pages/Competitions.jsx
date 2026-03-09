@@ -1,3 +1,4 @@
+import medhackImage from '../assets/MedHack.jpg'
 import anzImage from '../assets/Anz x Advisory Challenge.jpg'
 import essaImage from '../assets/Essa Case.jpg'
 import ancoraImage from '../assets/Ancora.jpg'
@@ -6,6 +7,15 @@ import './PageStyles.css'
 
 const Competitions = () => {
   const competitions = [
+    {
+      id: 11,
+      title: 'MedHack Hackathon 2026',
+      result: '1st Place',
+      description: 'Won first place out of 200+ applicants. Built an application for dementia care and competed in the coding track, working with 2 million rows of data. Trained the ML model achieving 92% accuracy and delivered the final pitch.',
+      date: '2026',
+      organizer: 'MedHack',
+      image: medhackImage
+    },
     {
       id: 1,
       title: 'Monash SEED x ANZ Advisory Challenge',

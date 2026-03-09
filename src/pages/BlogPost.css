@@ -1,0 +1,147 @@
+.back-link {
+  display: inline-block;
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--accent-blue-dark);
+}
+
+.post-meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.post-meta-header .post-category {
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.post-meta-header .post-date,
+.post-meta-header .post-readtime {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.blog-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.blog-article h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Noto Serif JP', serif;
+  margin: 32px 0 16px;
+}
+
+.blog-article h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Noto Serif JP', serif;
+  margin: 28px 0 12px;
+  color: var(--text-primary);
+}
+
+.blog-article h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.blog-article p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.blog-article ul,
+.blog-article ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.blog-article li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.blog-article strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.blog-article em {
+  color: var(--text-muted);
+}
+
+.blog-article blockquote {
+  border-left: 3px solid var(--accent-blue);
+  background: rgba(167, 199, 231, 0.08);
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.blog-article blockquote p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.blog-article code {
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.blog-article pre {
+  background: var(--bg-tertiary);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.blog-article pre code {
+  background: none;
+  padding: 0;
+}
+
+.blog-article a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.blog-article a:hover {
+  color: var(--accent-blue-dark);
+}
+
+.blog-article img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  margin: 20px 0;
+}
+
+.blog-article hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .blog-article {
+    padding: 0 16px 60px;
+  }
+}

@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom'
+import { getAllPosts } from './BlogPost'
 import './PageStyles.css'
 
 const Posts = () => {
-  const posts = [
-
-  ]
+  const posts = getAllPosts()
 
   return (
     <div className="page">
@@ -13,25 +13,31 @@ const Posts = () => {
       </div>
 
       <div className="page-content">
-        <div className="posts-list">
-          {posts.map((post) => (
-            <article key={post.id} className="post-card">
-              <div className="post-image"></div>
-              <div className="post-content">
-                <div className="post-meta">
-                  <span className="post-category">{post.category}</span>
-                  <span className="post-date">{post.date}</span>
+        {posts.length === 0 ? (
+          <p style={{ textAlign: 'center', color: 'var(--text-muted)', padding: '60px 0' }}>
+            No posts yet. Check back soon!
+          </p>
+        ) : (
+          <div className="posts-list">
+            {posts.map((post) => (
+              <Link to={`/posts/${post.slug}`} key={post.slug} className="post-card" style={{ textDecoration: 'none' }}>
+                <div className="post-image"></div>
+                <div className="post-content">
+                  <div className="post-meta">
+                    <span className="post-category">{post.category}</span>
+                    <span className="post-date">{post.date}</span>
+                  </div>
+                  <h2 className="post-title">{post.title}</h2>
+                  <p className="post-excerpt">{post.excerpt}</p>
+                  <div className="post-footer">
+                    <span className="post-readtime">{post.readTime}</span>
+                    <span className="post-link">Read More →</span>
+                  </div>
                 </div>
-                <h2 className="post-title">{post.title}</h2>
-                <p className="post-excerpt">{post.excerpt}</p>
-                <div className="post-footer">
-                  <span className="post-readtime">{post.readTime}</span>
-                  <a href="#" className="post-link">Read More →</a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
