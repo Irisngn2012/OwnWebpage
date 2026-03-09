@@ -24,7 +24,11 @@ const Projects = () => {
     {
       id: 1,
       title: 'Unique - Neurodivergent Support App',
-      description: 'Full-stack MVP pilot application designed to support neurodivergent users. Independently designed and developed using Figma and TypeScript with integrated AI features for content summarisation.',
+      highlights: [
+        'Full-stack MVP pilot app designed to support neurodivergent users',
+        'Independently designed and developed using Figma and TypeScript',
+        'Integrated AI features for content summarisation',
+      ],
       category: 'Full-Stack Development',
       technologies: ['TypeScript', 'Figma', 'AI Integration', 'React'],
       organization: 'Monash MIME',
@@ -33,7 +37,11 @@ const Projects = () => {
     {
       id: 2,
       title: 'AI Mentor Learning Platform',
-      description: 'AI-assisted learning platform with configured AI agent flows, prompt logic, and response behavior. Includes PDF/document processing and NLP content preparation.',
+      highlights: [
+        'Configured AI agent flows, prompt logic, and response behavior',
+        'Built PDF/document processing and NLP content preparation',
+        'Deployed as an AI-assisted learning platform',
+      ],
       category: 'AI Engineering',
       technologies: ['AI Agents', 'NLP', 'Prompt Engineering', 'Python'],
       organization: 'FPT Smart Cloud',
@@ -43,7 +51,11 @@ const Projects = () => {
     {
       id: 3,
       title: 'Next-Gen HR Chatbot',
-      description: 'Developed chatbot achieving 40% faster response times while maintaining industry-leading accuracy. Applied RAG techniques and AI agent workflows using Dify.',
+      highlights: [
+        'Achieved 40% faster response times with industry-leading accuracy',
+        'Applied RAG techniques and AI agent workflows using Dify',
+        'Integrated Power BI dashboards for monitoring',
+      ],
       category: 'AI & Chatbot',
       technologies: ['RAG', 'Dify', 'NLP', 'Power BI'],
       organization: 'VP Bank'
@@ -51,7 +63,11 @@ const Projects = () => {
     {
       id: 4,
       title: 'Bike Riding Simulator App',
-      description: 'Building an app to simulate bike riding using real-time data and Bluetooth Low Energy integration for human-powered bikes.',
+      highlights: [
+        'Simulates bike riding using real-time data streams',
+        'Bluetooth Low Energy integration for human-powered bikes',
+        'Built with Next.js for cross-platform performance',
+      ],
       category: 'IoT & Mobile',
       technologies: ['Next.js', 'Bluetooth LE', 'Real-time Data'],
       organization: 'Monash Human Power',
@@ -59,16 +75,24 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: 'Children Social Stories App',
-      description: 'Developing an app to help children with social stories when visiting doctors. Collaborating with clinicians at Monash Health for UI/UX design.',
-      category: 'Healthcare App',
-      technologies: ['Figma', 'iOS', 'Android', 'UI/UX'],
+      title: 'MYMEURON – Sepsis & Triage Prediction',
+      highlights: [
+        'Co-lead of the project, collaborating with a supervisor from the Royal Children\'s Hospital',
+        'Building predictive models for sepsis detection and triage outcomes',
+        'Working with clinical data and machine learning pipelines',
+      ],
+      category: 'Healthcare AI',
+      technologies: ['Python', 'Machine Learning', 'Clinical Data', 'Predictive Modelling'],
       organization: 'Monash Young MedTech'
     },
     {
       id: 6,
       title: 'PDF Parsing Tool & BI Dashboard',
-      description: 'Built PDF parsing tool and real-time Power BI dashboards to improve data extraction, monitoring, and customer experience insights.',
+      highlights: [
+        'Built PDF parsing tool for automated data extraction',
+        'Created real-time Power BI dashboards for monitoring',
+        'Improved customer experience insights through data visualization',
+      ],
       category: 'Data Engineering',
       technologies: ['Python', 'Power BI', 'PDF Processing'],
       organization: 'VP Bank'
@@ -76,7 +100,11 @@ const Projects = () => {
     {
       id: 7,
       title: 'Wage Trust Remediation Analysis',
-      description: 'Analyzed payroll and timesheet data to ensure compliance and accuracy across large datasets. Developed structured data workflows for testing efficiency.',
+      highlights: [
+        'Analyzed payroll and timesheet data for compliance and accuracy',
+        'Worked across large datasets to identify discrepancies',
+        'Developed structured data workflows for testing efficiency',
+      ],
       category: 'Data Analytics',
       technologies: ['SQL', 'ACL', 'Alteryx', 'Excel'],
       organization: 'PwC Australia',
@@ -86,7 +114,11 @@ const Projects = () => {
     {
       id: 8,
       title: 'ASRC Intake System Research',
-      description: 'Researched and evaluated triage and intake systems to support standardized, evidence-based intake processes for the Asylum Seeker Resource Centre.',
+      highlights: [
+        'Researched and evaluated triage and intake systems',
+        'Supported standardized, evidence-based intake processes',
+        'Delivered recommendations for the Asylum Seeker Resource Centre',
+      ],
       category: 'Consulting',
       technologies: ['Research', 'Digital Platforms', 'Data Analysis'],
       organization: '180 Degrees Consulting'
@@ -116,7 +148,15 @@ const Projects = () => {
               </div>
               <div className="project-info">
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+                {project.highlights ? (
+                  <ul className="project-highlights">
+                    {project.highlights.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="project-description">{project.description}</p>
+                )}
                 <div className="project-tech">
                   {project.technologies.map((tech, index) => (
                     <span key={index} className="tech-tag">{tech}</span>

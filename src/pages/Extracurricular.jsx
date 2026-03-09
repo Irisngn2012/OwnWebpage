@@ -36,7 +36,7 @@ const Extracurricular = () => {
       title: 'Software Team Member & MYMEURON Co-Lead',
       organization: 'Monash Young MedTech Innovators (MYMI)',
       duration: 'Feb 2024 – Present',
-      description: 'Working on multiple healthcare technology projects. Co-leading the MYMEURON project and contributing to the AESOP project. Developing apps to help children with social stories when visiting doctors, collaborating with clinicians at Monash Health using Figma for UI/UX design and implementing both iOS and Android versions.',
+      description: 'Co-leading the MYMEURON project, working with a supervisor from the Royal Children\'s Hospital to build predictive models for sepsis detection and triage. Also contributing to the AESOP project, developing apps to help children with social stories when visiting doctors using Figma, iOS, and Android.',
       projects: ['MYMEURON (Co-Lead)', 'AESOP']
     },
     {
@@ -108,19 +108,6 @@ const Extracurricular = () => {
       duration: 'Jun 2024 – June 2025',
       description: 'Worked in a consulting team to address operational and strategic challenges for nonprofit clients including StreetSmart and the Asylum Seeker Resource Centre (ASRC). Researched and evaluated triage and intake systems to support evidence-based intake processes.',
       clients: ['StreetSmart', 'ASRC']
-    },
-  ]
-
-  const achievements = [
-    {
-      id: 1,
-      title: 'VP Bank HR Chatbot',
-      description: 'Contributed to the development of next-gen HR chatbot, achieving 40% faster response times while maintaining industry-leading accuracy.'
-    },
-    {
-      id: 3,
-      title: 'Most Funded Project',
-      description: 'Led the most funded project in Monash BAP x MSFIN Case Competition, delivering a compelling pitch to enhance donor attraction and retention.'
     },
   ]
 
@@ -234,18 +221,6 @@ const Extracurricular = () => {
           </div>
         </section>
 
-        <section className="content-section">
-          <h2 className="section-title">Key Achievements</h2>
-          <div className="skills-grid">
-            {achievements.map((achievement) => (
-              <div key={achievement.id} className="skill-card">
-                <div className="skill-icon">🏆</div>
-                <h3>{achievement.title}</h3>
-                <p>{achievement.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
       </div>
     </div>
   )

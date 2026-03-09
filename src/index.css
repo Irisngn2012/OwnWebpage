@@ -7,29 +7,29 @@
 }
 
 :root {
-  /* Sakura Pastel Theme */
-  --primary-color: #E8A0BF;
-  --primary-dark: #D4879F;
-  --primary-light: #F4C2D7;
+  /* Soft Minimal Theme */
+  --primary-color: #D4A0B9;
+  --primary-dark: #A06F88;
+  --primary-light: #E8C5D5;
 
   --accent-blue: #A7C7E7;
-  --accent-blue-dark: #8BB3D9;
+  --accent-blue-dark: #6B9AC4;
   --accent-blue-light: #C5DDEF;
   --accent-green: #B5D8C7;
 
-  --bg-primary: #FFF5F8;
-  --bg-secondary: #F8EDF2;
-  --bg-tertiary: #F0E6ED;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-tertiary: #F5F4F5;
   --bg-card: #FFFFFF;
 
-  --text-primary: #4A3347;
-  --text-secondary: #7B6178;
-  --text-muted: #A89BA5;
+  --text-primary: #1A1220;
+  --text-secondary: #3D3145;
+  --text-muted: #635768;
 
-  --border-color: #E8D5E0;
-  --shadow-sm: 0 1px 3px 0 rgba(232, 160, 191, 0.15);
-  --shadow-md: 0 4px 8px -1px rgba(167, 199, 231, 0.2), 0 2px 4px -2px rgba(232, 160, 191, 0.15);
-  --shadow-lg: 0 10px 20px -3px rgba(167, 199, 231, 0.25), 0 4px 8px -4px rgba(232, 160, 191, 0.2);
+  --border-color: #E8E3E6;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.06);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -37,6 +37,7 @@
   --radius-xl: 20px;
 
   font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16.5px;
   line-height: 1.6;
   font-weight: 400;
   color: var(--text-primary);

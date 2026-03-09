@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import './BlogPost.css'
 
 const postFiles = import.meta.glob('../posts/*.md', { eager: true, query: '?raw', import: 'default' })
+const imageFiles = import.meta.glob('../assets/**/*.{png,jpg,jpeg,svg,gif,webp}', { eager: true, import: 'default' })
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/)
@@ -61,7 +62,15 @@ const BlogPost = () => {
 
       <div className="page-content">
         <article className="blog-article">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown
+            components={{
+              img: ({ src, alt, ...props }) => {
+                const match = Object.entries(imageFiles).find(([path]) => path.includes(src))
+                const resolvedSrc = match ? match[1] : src
+                return <img src={resolvedSrc} alt={alt} {...props} />
+              }
+            }}
+          >{post.content}</ReactMarkdown>
         </article>
       </div>
     </div>

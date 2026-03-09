@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import profileImage from '../assets/Image for apply.jpeg'
+import SakuraPetals from '../components/SakuraPetals'
 import './Home.css'
 
 const Home = () => {
@@ -26,7 +27,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Hero Section - Netflix Style */}
+      <SakuraPetals />
+      {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
           <div className="hero-gradient"></div>
@@ -39,7 +41,7 @@ const Home = () => {
               Hi, I'm <span className="highlight">Iris Nguyen</span>
             </h1>
             <p className="hero-subtitle">
-              AI Engineer | Full-Stack Developer | Data Analyst
+              AI Engineer | Data Analyst
             </p>
             <p className="hero-description">
             I study IT & Commerce at Monash and enjoy building thoughtful, data-driven tech with AI and analytics. I’ve worked across banking, consulting, and cloud environments, and I’m particularly interested in creating inclusive tools for neurodivergent users.            <br /><br />

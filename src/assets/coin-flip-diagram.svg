@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="Quicksand, sans-serif">
+  <!-- Background -->
+  <rect width="700" height="320" rx="16" fill="#F9F7F8" stroke="#E8E3E6" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="350" y="35" text-anchor="middle" font-size="16" font-weight="700" fill="#2A2030">Coin Flip Experiment: X = Number of Heads in 3 Flips</text>
+
+  <!-- Flip 1 -->
+  <text x="100" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#524558">Flip 1</text>
+  <!-- H -->
+  <circle cx="60" cy="100" r="22" fill="#A7C7E7" stroke="#6B9AC4" stroke-width="2"/>
+  <text x="60" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">H</text>
+  <!-- T -->
+  <circle cx="140" cy="100" r="22" fill="#E8C5D5" stroke="#A06F88" stroke-width="2"/>
+  <text x="140" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">T</text>
+
+  <!-- Flip 2 -->
+  <text x="300" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#524558">Flip 2</text>
+  <circle cx="260" cy="100" r="22" fill="#A7C7E7" stroke="#6B9AC4" stroke-width="2"/>
+  <text x="260" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">H</text>
+  <circle cx="340" cy="100" r="22" fill="#E8C5D5" stroke="#A06F88" stroke-width="2"/>
+  <text x="340" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">T</text>
+
+  <!-- Flip 3 -->
+  <text x="500" y="70" text-anchor="middle" font-size="13" font-weight="600" fill="#524558">Flip 3</text>
+  <circle cx="460" cy="100" r="22" fill="#A7C7E7" stroke="#6B9AC4" stroke-width="2"/>
+  <text x="460" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">H</text>
+  <circle cx="540" cy="100" r="22" fill="#E8C5D5" stroke="#A06F88" stroke-width="2"/>
+  <text x="540" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">T</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="135" x2="350" y2="155" stroke="#7D7283" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7D7283"/></marker></defs>
+
+  <!-- Outcomes table -->
+  <text x="350" y="175" text-anchor="middle" font-size="14" font-weight="700" fill="#2A2030">All Possible Outcomes</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="190" width="145" height="30" rx="8" fill="#A7C7E7" opacity="0.3" stroke="#6B9AC4" stroke-width="1"/>
+  <text x="112" y="210" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">HHH → X = 3</text>
+
+  <rect x="195" y="190" width="145" height="30" rx="8" fill="#A7C7E7" opacity="0.25" stroke="#6B9AC4" stroke-width="1"/>
+  <text x="267" y="210" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">HHT → X = 2</text>
+
+  <rect x="350" y="190" width="145" height="30" rx="8" fill="#A7C7E7" opacity="0.25" stroke="#6B9AC4" stroke-width="1"/>
+  <text x="422" y="210" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">HTH → X = 2</text>
+
+  <rect x="505" y="190" width="145" height="30" rx="8" fill="#E8C5D5" opacity="0.3" stroke="#A06F88" stroke-width="1"/>
+  <text x="577" y="210" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">HTT → X = 1</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="228" width="145" height="30" rx="8" fill="#A7C7E7" opacity="0.25" stroke="#6B9AC4" stroke-width="1"/>
+  <text x="112" y="248" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">THH → X = 2</text>
+
+  <rect x="195" y="228" width="145" height="30" rx="8" fill="#E8C5D5" opacity="0.3" stroke="#A06F88" stroke-width="1"/>
+  <text x="267" y="248" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">THT → X = 1</text>
+
+  <rect x="350" y="228" width="145" height="30" rx="8" fill="#E8C5D5" opacity="0.3" stroke="#A06F88" stroke-width="1"/>
+  <text x="422" y="248" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">TTH → X = 1</text>
+
+  <rect x="505" y="228" width="145" height="30" rx="8" fill="#E8C5D5" opacity="0.4" stroke="#A06F88" stroke-width="1"/>
+  <text x="577" y="248" text-anchor="middle" font-size="12" font-weight="600" fill="#2A2030">TTT → X = 0</text>
+
+  <!-- Summary -->
+  <text x="350" y="285" text-anchor="middle" font-size="13" fill="#524558">X can be: <tspan font-weight="700" fill="#6B9AC4">0</tspan>, <tspan font-weight="700" fill="#6B9AC4">1</tspan>, <tspan font-weight="700" fill="#6B9AC4">2</tspan>, or <tspan font-weight="700" fill="#6B9AC4">3</tspan>  →  This is a <tspan font-weight="700" fill="#A06F88">Discrete Random Variable</tspan></text>
+  <text x="350" y="305" text-anchor="middle" font-size="12" fill="#7D7283">(Countable outcomes determined by chance)</text>
+</svg>
