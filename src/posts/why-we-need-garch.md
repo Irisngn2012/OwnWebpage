@@ -2,56 +2,56 @@
 title: Why We Need the GARCH Model
 date: 2026-06-20
 category: Econometrics
-excerpt: When markets get wild, the "constant risk" assumption breaks. Here's why the Efficient Market Hypothesis isn't the whole story, and how GARCH lets us actually predict volatility (sigma).
+excerpt: Markets get wild and the idea of constant risk just falls apart. Here is why the Efficient Market Hypothesis is not the full story, and how GARCH actually lets us predict volatility (sigma).
 readTime: 8 mins read
 ---
 
 # Why We Need the GARCH Model
 
-If you've ever looked at a stock chart, you've probably noticed something: markets don't move at a steady pace. They drift quietly for weeks, then suddenly everything goes crazy for a few days. That "craziness" has a name in finance and econometrics: **volatility**. And learning to predict it is exactly what the GARCH model was built for.
+Okay so if you have ever stared at a stock chart, you probably noticed something funny. The market never moves at a steady pace. It drifts quietly for weeks and then out of nowhere everything goes wild for a few days. That wild part has a name in econometrics, and it is called volatility. Learning to predict it is exactly what the GARCH model was built for, and honestly it is one of my favourite ideas in the whole subject.
 
-Let me walk you through *why* we need it, starting from a beautiful idea that doesn't quite hold up in the real world.
+Let me walk you through why we even need it. I promise it makes sense once you see it.
 
 ## The Efficient Market Hypothesis (and where it cracks)
 
-The **Efficient Market Hypothesis (EMH)** says that asset prices already reflect all available information. If that's true, then price changes should be essentially unpredictable, like a coin flip. Tomorrow's return shouldn't be forecastable from yesterday's, because any predictable pattern would already be traded away.
+The Efficient Market Hypothesis, or EMH, says that prices already reflect all the information we have. If that is true, then price changes should be basically impossible to predict, kind of like a coin flip. Tomorrow's return should not be guessable from yesterday's, because if there really was an obvious pattern, traders would have already jumped on it.
 
-In its cleanest form, EMH suggests returns look like **white noise**: zero mean, no autocorrelation, and a *constant* variance over time. A nice, calm, well-behaved random walk.
+In its cleanest form, EMH says returns look like white noise: zero mean, no autocorrelation, and a constant variance that never changes. A nice, calm, well behaved random walk.
 
-Here's the problem: **real markets don't behave that way.**
+Here is the problem though. Real markets just do not behave like that.
 
-When we actually look at financial return data, two things jump out:
+When you actually look at real return data, two things jump out at you straight away:
 
-- **Volatility clustering** — big moves tend to be followed by big moves, and calm periods by calm periods. The 2008 crisis wasn't one bad day; it was weeks of turbulence stacked together.
-- **Fat tails** — extreme events (huge crashes or rallies) happen far more often than a normal distribution with constant variance would predict.
+- **Volatility clustering.** Big moves tend to be followed by big moves, and quiet periods by quiet periods. The 2008 crisis was not one bad day, it was weeks of chaos stacked on top of each other.
+- **Fat tails.** Extreme events, the huge crashes and rallies, happen way more often than a normal distribution with constant variance would ever predict.
 
-So even if the *direction* of returns is hard to predict (EMH might be right about that), the *size* of the swings is clearly **not** constant and **not** random. That's the crack we can drive a model through.
+So even if the direction of returns really is hard to predict, and EMH might be right about that part, the size of the swings is clearly not constant and clearly not random. And that little crack is exactly what we can build a whole model around.
 
-## The assumption that quietly fails: constant variance
+## The assumption that quietly fails
 
-Most basic models assume **homoskedasticity** — a fancy word meaning the variance of the error term stays constant over time:
+Most of the basic models assume something called homoskedasticity. It is a scary word, but it just means the variance of the error term stays constant the whole time:
 
 ```
 Var(error_t) = sigma^2   (the same sigma for every t)
 ```
 
-But financial data is **heteroskedastic**: the variance changes through time. During calm periods sigma is small; during a crisis sigma blows up. Pretending sigma is constant means you'll badly *underestimate* risk right when it matters most.
+But financial data is heteroskedastic, which just means the variance actually changes over time. In calm periods sigma is small, and in a crisis sigma blows up. So pretending sigma is constant means you will badly underestimate the risk at the exact moment it matters the most. Not great.
 
-What we really want is a way to model the **conditional variance** — the variance *given everything we've seen so far*:
+What we really want is to model the conditional variance, which is the variance given everything we have seen so far:
 
 ```
 sigma_t^2 = Var(return_t | information up to t-1)
 ```
 
-That little subscript *t* is the whole game. We're no longer asking "what's the average risk?" We're asking "what's the risk **right now**, given recent history?"
+That tiny little t is the whole game. We are not asking "what is the average risk over all time" anymore. We are asking "what is the risk right now, given what just happened."
 
 ## From ARCH to GARCH
 
-The first big idea came from Robert Engle: the **ARCH** model (Autoregressive Conditional Heteroskedasticity). The insight is simple and intuitive — *today's volatility depends on the size of recent shocks.* If yesterday had a huge surprise return, today is probably going to be volatile too.
+The first big idea came from Robert Engle, and it is called the ARCH model. It stands for Autoregressive Conditional Heteroskedasticity, but please do not let the name scare you. The idea behind it is so intuitive: today's volatility depends on how big the recent shocks were. If yesterday had a massive surprise return, then today is probably going to be bumpy too.
 
-Tim Bollerslev then generalized it into **GARCH** (the extra "G" is for *Generalized*), which adds one more idea: today's volatility also depends on *yesterday's volatility level*, not just yesterday's shock. This captures volatility clustering really elegantly.
+Then Tim Bollerslev took it one step further and gave us GARCH, where the extra G is just for Generalized. He added one more idea: today's volatility also depends on yesterday's volatility level, not only on yesterday's shock. That one extra piece is what captures the clustering so nicely.
 
-The classic **GARCH(1,1)** model looks like this:
+The classic GARCH(1,1) model looks like this:
 
 ```
 return_t   = mu + error_t
@@ -59,32 +59,32 @@ error_t    = sigma_t * z_t          (z_t is standard white noise)
 sigma_t^2  = omega + alpha * error_(t-1)^2 + beta * sigma_(t-1)^2
 ```
 
-Let's read that last line in plain English, because it's the heart of it:
+Let me translate that last line into plain words, because it really is the heart of everything:
 
-- **omega** — a baseline, long-run level of variance. Markets are never perfectly still.
-- **alpha · error²(t-1)** — the *reaction* term. A big shock yesterday (a large squared error) pushes today's volatility up. This is the "news" effect.
-- **beta · sigma²(t-1)** — the *persistence* term. If yesterday was already volatile, today inherits some of that. This is what creates clustering.
+- **omega** is a baseline level of variance. Markets are never perfectly still, so there is always a little floor.
+- **alpha times yesterday's squared shock** is the reaction part. A big surprise yesterday pushes today's volatility up. Think of it as the market reacting to fresh news.
+- **beta times yesterday's variance** is the memory part. If yesterday was already volatile, today inherits some of that. This is exactly what creates the clustering we saw earlier.
 
-So tomorrow's predicted risk is **a baseline + a reaction to the latest surprise + the memory of recent volatility.** That's a remarkably human way to think about risk, and it matches what we actually see in the data.
+So tomorrow's predicted risk is just a baseline, plus a reaction to the newest surprise, plus the memory of how rough things have been lately. I love that, because it is such a human way to think about risk, and it matches what we actually see in the data.
 
-## Why this matters — predicting sigma
+## Why this matters: predicting sigma
 
-Notice what GARCH gives us that EMH alone never did. EMH says you (probably) can't predict the **return**. Fine. But GARCH says you absolutely *can* predict the **volatility** — the sigma — and you can do it pretty well.
+Here is the part that makes me really happy. EMH says you probably cannot predict the return, and fine, maybe that is true. But GARCH says you absolutely can predict the volatility, the sigma, and you can do it surprisingly well.
 
-That single quantity, sigma_t, is enormously useful:
+And that one number, sigma_t, turns out to be incredibly useful:
 
-- **Risk management** — Value at Risk (VaR) and stress tests need a forward-looking estimate of how wild things might get.
-- **Option pricing** — volatility is literally an input to pricing models; a better sigma means better prices.
-- **Portfolio decisions** — sizing positions based on *current* risk instead of some flat long-run average.
+- **Risk management.** Value at Risk and stress tests all need a forward looking guess of how wild things could get.
+- **Option pricing.** Volatility is literally an input into pricing options, so a better sigma means better prices.
+- **Portfolio decisions.** You can size your positions based on the risk right now, instead of some flat long run average.
 
-So the two ideas aren't enemies. EMH can hold for the *mean* (returns are hard to forecast) while GARCH handles the *variance* (risk is very much forecastable). They live together.
+So the two ideas are not really enemies at all. EMH can hold for the mean, since returns are hard to forecast, while GARCH takes care of the variance, since risk is very much forecastable. They actually live together really nicely.
 
 ## The takeaway
 
-The Efficient Market Hypothesis is a gorgeous starting point, but it leans on an assumption — constant variance — that real markets break every time things get exciting. Volatility clusters, tails are fat, and risk is anything but constant.
+The Efficient Market Hypothesis is a beautiful starting point, but it leans on one assumption, constant variance, that real markets break every single time things get exciting. Volatility clusters, the tails are fat, and risk is anything but constant.
 
-GARCH is the fix. By modeling the **conditional variance** as a mix of a baseline, recent shocks, and recent volatility, it lets us forecast sigma — the one thing about markets that genuinely *is* predictable.
+GARCH is the fix. By modelling the conditional variance as a mix of a baseline, the recent shocks, and the recent volatility, it lets us forecast sigma, which is the one thing about markets that genuinely is predictable.
 
-And honestly, that's the part of econometrics I find magical: we admit we can't predict *where* the market goes, but we can still say something rigorous and useful about *how rough the ride will be.*
+And that is the part of econometrics I find kind of magical. We admit that we cannot predict where the market is going, but we can still say something solid and useful about how rough the ride is going to be.
 
-Thanks for reading — I hope GARCH feels a little less intimidating now. 💛
+Thanks for reading, and I really hope GARCH feels a little less scary now! 💛
