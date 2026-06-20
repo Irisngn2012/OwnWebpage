@@ -1,18 +1,4 @@
 import './PageStyles.css'
-import fptLogo from '../assets/Fpt.jpg'
-import pwcLogo from '../assets/Pwc.jpg'
-import monashLogo from '../assets/monash.png'
-import dcLogo from '../assets/180monash.png'
-
-// Organization logo mapping
-const companyLogos = {
-  'FPT Smart Cloud': fptLogo,
-  'Monash Institute of Medical Engineering (MIME)': monashLogo,
-  'PwC Australia': pwcLogo,
-  'Vietnam Prosperity Joint-Stock Commercial Bank (VP Bank)': null,
-  '180 Degrees Consulting - Monash University': dcLogo,
-  'Monash University, Melbourne, Australia': monashLogo,
-}
 
 const CV = () => {
   return (
@@ -36,7 +22,55 @@ const CV = () => {
           </div>
 
           <section className="cv-section">
-            <h2 className="cv-section-title">Work Experience</h2>
+            <h2 className="cv-section-title">Experience</h2>
+
+            <div className="cv-item">
+              <div className="cv-item-header">
+                <h3>Casual Research Officer</h3>
+                <span className="cv-date">May 2026 – Present</span>
+              </div>
+              <p className="cv-company">Monash University – Design Department (Caulfield)</p>
+              <ul className="cv-list">
+                <li>Conducting survey data analysis in R for a product developed by Monash University's Design Department</li>
+                <li>Translating raw survey responses into actionable, data-driven design insights</li>
+                <li>One-off applied research project supporting product development</li>
+              </ul>
+            </div>
+
+            <div className="cv-item">
+              <div className="cv-item-header">
+                <h3>Software Engineer</h3>
+                <span className="cv-date">May 2026 – Present</span>
+              </div>
+              <p className="cv-company">Lewis Australia</p>
+              <ul className="cv-list">
+                <li>Developing and maintaining software solutions as part of the engineering team</li>
+                <li>Building, testing, and refining application features to meet business requirements</li>
+              </ul>
+            </div>
+
+            <div className="cv-item">
+              <div className="cv-item-header">
+                <h3>Data Analytics</h3>
+                <span className="cv-date">May 2026 – Present</span>
+              </div>
+              <p className="cv-company">Veiramal Consulting</p>
+              <ul className="cv-list">
+                <li>Performing data analytics on payroll data to support accurate processing and reporting</li>
+                <li>Cleaning, reconciling, and analysing payroll datasets to surface actionable insights</li>
+              </ul>
+            </div>
+
+            <div className="cv-item">
+              <div className="cv-item-header">
+                <h3>AI Fitness Trainer</h3>
+                <span className="cv-date">Apr 2026 – Present</span>
+              </div>
+              <p className="cv-company">Monash University</p>
+              <ul className="cv-list">
+                <li>Helping Monash staff and lecturers understand and adopt AI tools at Monash</li>
+              </ul>
+            </div>
 
             <div className="cv-item">
               <div className="cv-item-header">

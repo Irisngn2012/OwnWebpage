@@ -1,33 +1,35 @@
 import { Link } from 'react-router-dom'
 import profileImage from '../assets/Image for apply.jpeg'
-import SakuraPetals from '../components/SakuraPetals'
 import './Home.css'
 
 const Home = () => {
   const featuredSections = [
     {
-      title: 'Work Experience',
+      title: 'Experience',
       items: [
-        { id: 1, title: 'AI Engineer Intern', category: 'FPT Smart Cloud' },
-        { id: 2, title: 'ISI Developer Intern', category: 'Monash MIME' },
-        { id: 3, title: 'Data Assurance Risk', category: 'PwC Australia' },
-        { id: 4, title: 'IT Intern', category: 'VP Bank' },
+        { id: 1, title: 'Casual Research Officer', category: 'Monash Design Dept', description: 'Survey data analysis in R for a Monash Design Department product.' },
+        { id: 2, title: 'Software Engineer', category: 'Lewis Australia', description: 'Building and maintaining software solutions with the engineering team.' },
+        { id: 3, title: 'Data Analytics', category: 'Veiramal Consulting', description: 'Analysing payroll data to support accurate processing and reporting.' },
+        { id: 4, title: 'AI Fitness Trainer', category: 'Monash University', description: 'Helping Monash staff and lecturers understand and adopt AI.' },
+        { id: 5, title: 'AI Engineer Intern', category: 'FPT Smart Cloud', description: 'Configuring AI agent flows for an AI-assisted learning platform.' },
+        { id: 6, title: 'ISI Developer Intern', category: 'Monash MIME', description: 'Full-stack MVP supporting neurodivergent users.' },
+        { id: 7, title: 'Data Assurance Risk', category: 'PwC Australia', description: 'Payroll and timesheet data analysis for wage remediation.' },
+        { id: 8, title: 'IT Intern', category: 'VP Bank', description: 'RAG chatbot and BI dashboards, ~40% efficiency gain.' },
       ]
     },
     {
       title: 'Awards & Achievements',
       items: [
-        { id: 1, title: 'SEED Incubator', category: '1st Place' },
-        { id: 2, title: 'Ancora Imparo', category: 'Top 40/2000' },
-        { id: 3, title: 'MSFIN Case Comp', category: 'Winner' },
-        { id: 4, title: 'CCA Hackathon', category: 'Finalist' },
+        { id: 1, title: 'SEED Incubator', category: '1st Place', description: 'First place at the Monash SEED Incubator.' },
+        { id: 2, title: 'Ancora Imparo', category: 'Top 40/2000', description: 'Selected for Monash\'s flagship leadership program.' },
+        { id: 3, title: 'MSFIN Case Comp', category: 'Winner', description: 'Winner of the MSFIN x Cause case competition.' },
+        { id: 4, title: 'CCA Hackathon', category: 'Finalist', description: 'Finalist at the CCA Hackathon 2025.' },
       ]
     }
   ]
 
   return (
     <div className="home">
-      <SakuraPetals />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background">
@@ -90,13 +92,11 @@ const Home = () => {
             <div className="row-items">
               {section.items.map((item) => (
                 <div key={item.id} className="featured-card">
-                  <div className="card-image">
-                    <div className="card-overlay">
-                      <span className="card-category">{item.category}</span>
-                    </div>
-                  </div>
-                  <div className="card-content">
+                  <div className="featured-card-accent"></div>
+                  <div className="featured-card-body">
+                    <span className="card-category">{item.category}</span>
                     <h3 className="card-title">{item.title}</h3>
+                    <p className="card-description">{item.description}</p>
                   </div>
                 </div>
               ))}

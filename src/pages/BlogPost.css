@@ -88,7 +88,7 @@
 
 .blog-article blockquote {
   border-left: 3px solid var(--accent-blue);
-  background: rgba(167, 199, 231, 0.08);
+  background: rgba(44, 74, 115, 0.08);
   padding: 12px 20px;
   margin: 20px 0;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;

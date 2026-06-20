@@ -4,8 +4,15 @@ const Personal = () => {
   const hobbies = [
     { icon: '🏋️', title: 'Gym', description: 'Staying active and maintaining fitness' },
     { icon: '🎹', title: 'Piano', description: 'Playing and practicing classical pieces' },
-    { icon: '📚', title: 'Reading', description: 'Devouring books across all genres - 125+ and counting!' },
+    { icon: '🏀', title: 'Basketball', description: 'Hooping whenever I can - on and off the court' },
+    { icon: '📚', title: 'Reading', description: 'Devouring books across all genres - 148 and counting! Currently reading The Scout Mindset.' },
     { icon: '☕', title: 'Coffee & Matcha', description: 'Endless cups of matcha and coffee fuel my days' },
+  ]
+
+  const dreams = [
+    { icon: '🎹', title: 'Solo Piano Concert', description: 'Perform a full piano concert entirely on my own.' },
+    { icon: '🏀', title: 'Semi-Pro Basketball', description: 'Play for a semi-professional basketball team.' },
+    { icon: '🧁', title: 'Baking', description: 'Bake and create something that\'s truly my own.' },
   ]
 
   const personality = [
@@ -42,7 +49,7 @@ const Personal = () => {
             Okay, so besides all the resume-worthy stuff... here's the real me. I'm basically a
             walking contradiction - I always have a lot of thought in my mind and sometimes it just gonna blow up. My blood type? Probably 50% matcha, 50% coffee
             at this point. You'll find me at the gym pretending I know what I'm doing, buried in
-            a book (125+ and counting - yes, I'm flexing), or baking at Wholefood Monash
+            a book (148 and counting - yes, I'm flexing), or baking at Wholefood Monash
             where I work casually. Come say hi, I promise I won't judge.
           </p>
           <p className="personal-philosophy">
@@ -80,7 +87,7 @@ const Personal = () => {
           <h2 className="section-title">Fun Facts</h2>
           <div className="fun-facts">
             <div className="fact-item">
-              <span className="fact-number">125+</span>
+              <span className="fact-number">148</span>
               <span className="fact-label">Books Read</span>
             </div>
             <div className="fact-item">
@@ -91,6 +98,19 @@ const Personal = () => {
               <span className="fact-number">I + E</span>
               <span className="fact-label">Holland Code</span>
             </div>
+          </div>
+        </section>
+
+        <section className="content-section">
+          <h2 className="section-title">Dreams &amp; Aspirations</h2>
+          <div className="hobbies-grid">
+            {dreams.map((dream, index) => (
+              <div key={index} className="hobby-card">
+                <span className="hobby-icon">{dream.icon}</span>
+                <h3 className="hobby-title">{dream.title}</h3>
+                <p className="hobby-description">{dream.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 

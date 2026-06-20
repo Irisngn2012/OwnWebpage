@@ -10,7 +10,7 @@
 .page-header {
   text-align: center;
   padding: 60px 24px 40px;
-  background: linear-gradient(to bottom, rgba(167, 199, 231, 0.08), var(--bg-primary));
+  background: linear-gradient(to bottom, rgba(44, 74, 115, 0.08), var(--bg-primary));
   position: relative;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .page-title {
-  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 12px;
@@ -80,7 +80,7 @@
   gap: 10px;
   color: var(--text-muted);
   border: 3px solid var(--accent-blue-light);
-  box-shadow: 0 0 20px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 0 20px rgba(44, 74, 115, 0.2);
 }
 
 .about-profile-image {
@@ -89,7 +89,7 @@
   object-fit: cover;
   border-radius: var(--radius-xl);
   border: 3px solid var(--accent-blue-light);
-  box-shadow: 0 8px 30px rgba(167, 199, 231, 0.25);
+  box-shadow: 0 8px 30px rgba(44, 74, 115, 0.25);
 }
 
 /* Certifications Grid */
@@ -110,7 +110,7 @@
 .cert-card:hover {
   border-color: var(--accent-blue);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 4px 15px rgba(44, 74, 115, 0.2);
 }
 
 .cert-provider {
@@ -147,6 +147,38 @@
   margin-bottom: 16px;
 }
 
+.about-goal {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-goal-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.about-goal h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 6px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.about-goal p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -164,7 +196,7 @@
 
 .skill-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 4px 20px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 4px 20px rgba(44, 74, 115, 0.2);
   transform: translateY(-4px);
 }
 
@@ -214,7 +246,7 @@
   height: 10px;
   background: var(--primary-color);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(212, 160, 185, 0.25);
+  box-shadow: 0 0 10px rgba(30, 58, 95, 0.25);
 }
 
 .timeline-date {
@@ -253,7 +285,7 @@
 
 .project-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 8px 30px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 8px 30px rgba(44, 74, 115, 0.2);
   transform: translateY(-4px);
 }
 
@@ -364,7 +396,7 @@
   width: 24px;
   height: 24px;
   border-radius: 6px;
-  background: rgba(167, 199, 231, 0.15);
+  background: rgba(44, 74, 115, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -413,7 +445,7 @@
 
 .competition-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 4px 20px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 4px 20px rgba(44, 74, 115, 0.2);
   transform: translateY(-4px);
 }
 
@@ -427,7 +459,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(212, 160, 185, 0.15);
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.15);
 }
 
 .competition-title {
@@ -468,13 +500,13 @@
 
 .activity-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 4px 20px rgba(167, 199, 231, 0.15);
+  box-shadow: 0 4px 20px rgba(44, 74, 115, 0.15);
 }
 
 .activity-icon {
   width: 50px;
   height: 50px;
-  background: rgba(167, 199, 231, 0.15);
+  background: rgba(44, 74, 115, 0.15);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -504,7 +536,7 @@
 }
 
 .activity-logo svg {
-  background: rgba(167, 199, 231, 0.15);
+  background: rgba(44, 74, 115, 0.15);
   padding: 13px;
   border-radius: var(--radius-md);
 }
@@ -553,12 +585,12 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 160, 185, 0.15);
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.15);
 }
 
 .download-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 160, 185, 0.25);
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.25);
   color: white;
 }
 
@@ -678,7 +710,7 @@
 
 .post-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 8px 30px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 8px 30px rgba(44, 74, 115, 0.2);
 }
 
 .post-image {
@@ -752,7 +784,7 @@
   font-style: italic;
   padding: 16px 24px;
   border-left: 3px solid var(--accent-blue);
-  background: rgba(167, 199, 231, 0.08);
+  background: rgba(44, 74, 115, 0.08);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin-top: 16px;
 }
@@ -775,7 +807,7 @@
 .hobby-card:hover {
   border-color: var(--primary-color);
   transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(212, 160, 185, 0.08);
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
 }
 
 .hobby-icon {
@@ -850,7 +882,7 @@
 
 .personality-card:hover {
   border-color: var(--primary-color);
-  box-shadow: 0 4px 20px rgba(212, 160, 185, 0.08);
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
 }
 
 .personality-test {
@@ -887,7 +919,7 @@
 
 .work-card:hover {
   border-color: var(--accent-blue);
-  box-shadow: 0 4px 20px rgba(167, 199, 231, 0.15);
+  box-shadow: 0 4px 20px rgba(44, 74, 115, 0.15);
 }
 
 .work-icon {
@@ -897,7 +929,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: rgba(167, 199, 231, 0.15);
+  background: rgba(44, 74, 115, 0.15);
   border-radius: var(--radius-md);
   flex-shrink: 0;
 }
@@ -1033,7 +1065,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(167, 199, 231, 0.2);
+  box-shadow: 0 0 0 3px rgba(44, 74, 115, 0.2);
 }
 
 .form-group input::placeholder,
@@ -1056,12 +1088,12 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 160, 185, 0.15);
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.15);
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 160, 185, 0.25);
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.25);
 }
 
 /* Responsive */

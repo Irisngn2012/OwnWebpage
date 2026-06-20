@@ -1,51 +1,50 @@
 import { useMemo } from 'react'
-import petal1 from '../assets/sakura-petal-1.svg'
-import petal2 from '../assets/sakura-petal-2.svg'
-import petal3 from '../assets/sakura-petal-3.svg'
-import petal4 from '../assets/sakura-petal-4.svg'
 import './SakuraPetals.css'
 
-const petalImages = [petal1, petal2, petal3, petal4]
+const starColors = ['#FFD23F', '#FFC107', '#FFE082', '#FFB300']
 
 const SakuraPetals = () => {
-  const petals = useMemo(() => {
+  const stars = useMemo(() => {
     return Array.from({ length: 35 }, (_, i) => ({
       id: i,
-      image: petalImages[i % petalImages.length],
+      color: starColors[i % starColors.length],
       left: Math.random() * 100,
-      size: Math.random() * 24 + 18,
+      size: Math.random() * 24 + 22,
       delay: Math.random() * 15,
       duration: Math.random() * 8 + 10,
       swayDuration: Math.random() * 4 + 3,
-      opacity: Math.random() * 0.5 + 0.3,
+      opacity: Math.random() * 0.5 + 0.4,
       rotateStart: Math.random() * 360,
     }))
   }, [])
 
   return (
     <div className="sakura-container">
-      {petals.map((petal) => (
+      {stars.map((star) => (
         <div
-          key={petal.id}
+          key={star.id}
           className="sakura-petal"
           style={{
-            left: `${petal.left}%`,
-            width: `${petal.size}px`,
-            height: `${petal.size}px`,
-            animationDelay: `${petal.delay}s`,
-            animationDuration: `${petal.duration}s`,
-            opacity: petal.opacity,
+            left: `${star.left}%`,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            animationDelay: `${star.delay}s`,
+            animationDuration: `${star.duration}s`,
+            opacity: star.opacity,
           }}
         >
-          <img
-            src={petal.image}
-            alt=""
+          <svg
             className="sakura-petal-img"
+            viewBox="0 0 24 24"
+            fill={star.color}
+            xmlns="http://www.w3.org/2000/svg"
             style={{
-              animationDuration: `${petal.swayDuration}s`,
-              transform: `rotate(${petal.rotateStart}deg)`,
+              animationDuration: `${star.swayDuration}s`,
+              transform: `rotate(${star.rotateStart}deg)`,
             }}
-          />
+          >
+            <path d="M12 1.8l2.95 6.66 7.25.62-5.5 4.78 1.65 7.1L12 17.9l-6.3 3.86 1.65-7.1-5.5-4.78 7.25-.62z" />
+          </svg>
         </div>
       ))}
     </div>

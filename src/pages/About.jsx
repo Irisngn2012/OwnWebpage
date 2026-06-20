@@ -35,6 +35,23 @@ const About = () => {
                 I'm particularly interested in building solutions that help neurodivergent users
                 and contribute to human development through technology.
               </p>
+              <p>
+                Looking ahead, my big dream is to work in AI as a machine learning engineer.
+                I love working with math and statistics, and the econometrics I'm currently
+                studying is the foundation I'm building on to get there, turning data and
+                models into real, intelligent solutions.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-goal">
+            <span className="about-goal-icon">🎯</span>
+            <div>
+              <h3>My Big Dream</h3>
+              <p>
+                To become a machine learning engineer in AI &mdash; working at the
+                intersection of math, statistics, and econometrics.
+              </p>
             </div>
           </div>
         </section>
